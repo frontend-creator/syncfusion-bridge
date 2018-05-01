@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>syncfusion-bridge</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="http://frontendcreator.com/favicon.ico" type="image/x-icon">    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://cdn.syncfusion.com/15.3.0.26/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet">
+  </head>
+  <body aurelia-app="src/main">
+    <h1>Loading...</h1>
+    
+    <script src="https://mattduffield.github.io/rjs-bundle/node_modules/requirejs/require.js"></script>
+    <script src="https://mattduffield.github.io/rjs-bundle/config.js"></script>
+    <script>
+      require.config({
+        paths: {
+          "jquery": "https://code.jquery.com/jquery-3.2.1.min",
+          "jquery-easing": "https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min",
+          "jquery-validation": "https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min",
+          "jquery-validation-unobtrusive": "https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.6/jquery.validate.unobtrusive.min",
+          "jsrender": "https://cdnjs.cloudflare.com/ajax/libs/jsrender/0.9.88/jsrender.min",
+          "bootstrap": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min",
+          "aurelia-fetch-client": "https://mattduffield.github.io/rjs-bundle/node_modules/aurelia-fetch-client/dist/amd/aurelia-fetch-client",
+          "syncfusion-javascript": "https://fec.blob.core.windows.net/bundles/syncfusion/15.3.29/syncfusion-javascript",
+          "aurelia-syncfusion-bridge": "https://fec.blob.core.windows.net/bundles/syncfusion/15.3.29/aurelia-syncfusion-bridge"
+        },
+        shim: {
+          'bootstrap': ['jquery'],
+          'jquery-easing': ['jquery'],
+          'jquery-validation': ['jquery'],
+          'jquery-validation-unobtrusive': ['jquery', 'jquery-validation'],
+          'syncfusion-javascript': ['jquery', 'jquery-easing', 'jquery-validation', 'jquery-validation-unobtrusive', 'jsrender'],
+          'aurelia-syncfusion-bridge': ['syncfusion-javascript']
+        }
+      })
+    </script>
+    <script src="https://mattduffield.github.io/rjs-bundle/bundles/aurelia.js"></script>
+    <script src="https://mattduffield.github.io/rjs-bundle/bundles/babel.js"></script>
+    <script>
+      require(['aurelia-bootstrapper']);
+     </script>
+  </body>
+</html>
